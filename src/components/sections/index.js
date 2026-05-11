@@ -1,0 +1,9 @@
+export { default as Hero } from "@/components/Hero";
+export { default as Marquee } from "@/components/Marquee";
+export { default as About } from "@/components/About";
+export { default as Skills } from "@/components/Skills";
+export { default as Qualifications } from "@/components/Qualifications";
+export { default as CaseStudies } from "@/components/CaseStudies";
+export { default as Quotes } from "@/components/Quotes";
+export { default as Stats } from "@/components/Stats";
+export { default as Contact } from "@/components/Contact";

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiOutlineArrowNarrowUp } from "react-icons/hi";
-import { useLenis } from "@studio-freight/react-lenis";
+import { useLenis } from "lenis/react";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);

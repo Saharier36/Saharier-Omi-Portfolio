@@ -5,7 +5,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLenis } from "@studio-freight/react-lenis";
+import { useLenis } from "lenis/react";
 import heroImg from "@/assets/file_00000000f074720bb70468b1c4a5bc61.png";
 import { HiOutlineChatAlt2, HiOutlineDownload } from "react-icons/hi";
 import {
@@ -137,15 +137,15 @@ export default function Hero() {
                 else window.location.hash = "#contact";
               }}
               onMouseMove={(e) => {
-                const { clientX, clientY, target } = e;
+                const { clientX, clientY, currentTarget } = e;
                 const { left, top, width, height } =
-                  target.getBoundingClientRect();
+                  currentTarget.getBoundingClientRect();
                 const x = (clientX - (left + width / 2)) * 0.2;
                 const y = (clientY - (top + height / 2)) * 0.2;
-                gsap.to(target, { x, y, duration: 0.3 });
+                gsap.to(currentTarget, { x, y, duration: 0.3 });
               }}
               onMouseLeave={(e) => {
-                gsap.to(e.target, {
+                gsap.to(e.currentTarget, {
                   x: 0,
                   y: 0,
                   duration: 0.5,
@@ -164,15 +164,15 @@ export default function Hero() {
             </button>
             <button
               onMouseMove={(e) => {
-                const { clientX, clientY, target } = e;
+                const { clientX, clientY, currentTarget } = e;
                 const { left, top, width, height } =
-                  target.getBoundingClientRect();
+                  currentTarget.getBoundingClientRect();
                 const x = (clientX - (left + width / 2)) * 0.2;
                 const y = (clientY - (top + height / 2)) * 0.2;
-                gsap.to(target, { x, y, duration: 0.3 });
+                gsap.to(currentTarget, { x, y, duration: 0.3 });
               }}
               onMouseLeave={(e) => {
-                gsap.to(e.target, {
+                gsap.to(e.currentTarget, {
                   x: 0,
                   y: 0,
                   duration: 0.5,

@@ -1,14 +1,15 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Marquee from "@/components/Marquee";
-import About from "@/components/About";
-import Skills from "@/components/Skills";
-import Qualifications from "@/components/Qualifications";
-import CaseStudies from "@/components/CaseStudies";
-import Quotes from "@/components/Quotes";
-import Stats from "@/components/Stats";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import { Navbar, Footer } from "@/components/global";
+import {
+  Hero,
+  Marquee,
+  About,
+  Skills,
+  Qualifications,
+  CaseStudies,
+  Quotes,
+  Stats,
+  Contact,
+} from "@/components/sections";
 
 export default function Home() {
   return (
