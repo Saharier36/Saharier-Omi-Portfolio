@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
+import { ReactLenis, useLenis } from "lenis/react";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,8 +11,8 @@ export default function SmoothScrollProvider({ children }) {
   useEffect(() => {
     // Force scroll to top on refresh
     window.scrollTo(0, 0);
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
     }
   }, []);
 
@@ -40,18 +40,22 @@ export default function SmoothScrollProvider({ children }) {
   }, [lenis]);
 
   return (
-    <ReactLenis root options={{ 
-      duration: 1.5, 
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      wheelMultiplier: 1.2,
-      lerp: 0.1,
-      orientation: "vertical",
-      gestureOrientation: "vertical",
-      smoothTouch: false,
-      touchMultiplier: 2,
-      infinite: false,
-    }}>
+    <ReactLenis
+      root
+      options={{
+        autoRaf: false,
+        duration: 1.5,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+        wheelMultiplier: 1.2,
+        lerp: 0.1,
+        orientation: "vertical",
+        gestureOrientation: "vertical",
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+      }}
+    >
       {children}
     </ReactLenis>
   );

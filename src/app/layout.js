@@ -1,7 +1,12 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import SmoothScrollProvider from "@/components/SmoothScrollProvider";
-import PageTransition from "@/components/PageTransition";
+import { siteConfig } from "@/config/site";
+import {
+  SmoothScrollProvider,
+  PageTransition,
+  CustomCursor,
+  ScrollToTop,
+} from "@/components/global";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -9,13 +14,28 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Saharier Omi | MERN Stack Developer Portfolio",
-  description:
-    "I'm a MERN Stack Developer crafting scalable web applications through robust architecture, seamless user experiences, and clean, performant code.",
+  metadataBase: new URL(siteConfig.url),
+  title: siteConfig.title,
+  description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: siteConfig.title,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    locale: siteConfig.locale,
+    type: siteConfig.type,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    creator: "@Saharier36",
+  },
 };
-
-import CustomCursor from "@/components/CustomCursor";
-import ScrollToTop from "@/components/ScrollToTop";
 
 export default function RootLayout({ children }) {
   return (
