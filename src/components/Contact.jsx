@@ -10,6 +10,20 @@ export default function Contact() {
   const container = useRef();
   const [selectedType, setSelectedType] = useState("Full Stack Web");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+    const subject = `Portfolio Inquiry: ${selectedType} - ${name}`;
+    const body = `Name: ${name}\nEmail: ${email}\nProject Type: ${selectedType}\n\nMessage:\n${message}`;
+
+    const mailtoUrl = `mailto:gsaharier761@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+  };
+
   useGSAP(() => {
     const inputs = container.current.querySelectorAll('input, textarea');
     
@@ -80,10 +94,12 @@ export default function Contact() {
         </div>
 
         <div className="glass-card p-10 md:p-16 rounded-[40px] border-white/10 relative">
-          <form className="space-y-10">
+          <form onSubmit={handleSubmit} className="space-y-10">
             <div className="relative border-b border-white/10 pb-4 transition-all group">
               <label className="text-[10px] uppercase font-bold text-gray-500 block mb-2 group-focus-within:text-brand-accent transition-colors">Full Name</label>
               <input 
+                name="name"
+                required
                 className="w-full bg-transparent border-0 focus:ring-0 px-0 text-white placeholder:text-gray-700 outline-none" 
                 placeholder="What's your name?" 
                 type="text" 
@@ -92,6 +108,8 @@ export default function Contact() {
             <div className="relative border-b border-white/10 pb-4 transition-all group">
               <label className="text-[10px] uppercase font-bold text-gray-500 block mb-2 group-focus-within:text-brand-accent transition-colors">Email Address</label>
               <input 
+                name="email"
+                required
                 className="w-full bg-transparent border-0 focus:ring-0 px-0 text-white placeholder:text-gray-700 outline-none" 
                 placeholder="Where should I reply?" 
                 type="email" 
@@ -115,6 +133,8 @@ export default function Contact() {
             <div className="relative border-b border-white/10 pb-4 transition-all group">
               <label className="text-[10px] uppercase font-bold text-gray-500 block mb-2 group-focus-within:text-brand-accent transition-colors">Message</label>
               <textarea 
+                name="message"
+                required
                 className="w-full bg-transparent border-0 focus:ring-0 px-0 text-white placeholder:text-gray-700 outline-none resize-none h-32" 
                 placeholder="Tell me about your project details..."
               ></textarea>

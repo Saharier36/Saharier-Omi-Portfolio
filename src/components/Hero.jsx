@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLenis } from "lenis/react";
 import heroImg from "@/assets/file_00000000f074720bb70468b1c4a5bc61.png";
 import { HiOutlineChatAlt2, HiOutlineDownload } from "react-icons/hi";
+import { FaShieldAlt } from "react-icons/fa";
 import {
   SiReact,
   SiNextdotjs,
@@ -15,7 +16,6 @@ import {
   SiExpress,
   SiTailwindcss,
   SiNodedotjs,
-  SiFirebase,
   SiJavascript,
 } from "react-icons/si";
 
@@ -35,7 +35,7 @@ export default function Hero() {
     { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
     { name: "Express", icon: SiExpress, color: "#FFFFFF" },
     { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
-    { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
+    { name: "Better Auth", icon: FaShieldAlt, color: "#FF007A" },
   ];
 
   useGSAP(
@@ -110,9 +110,9 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-16 items-center">
         <div className="lg:col-span-7 space-y-12">
-          <div className="hero-reveal inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10">
-            <span className="w-2 h-2 rounded-full bg-brand-accent animate-ping"></span>
-            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400">
+          <div className="hero-reveal inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 w-max">
+            <span className="w-2 h-2 shrink-0 rounded-full bg-brand-accent animate-ping"></span>
+            <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-gray-400 whitespace-nowrap">
               Available for Opportunities
             </span>
           </div>
@@ -162,7 +162,11 @@ export default function Hero() {
                 →
               </span>
             </button>
-            <button
+            <a
+              href="/Golam_Saharier_Omi_Resume.pdf"
+              download="Golam_Saharier_Omi_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               onMouseMove={(e) => {
                 const { clientX, clientY, currentTarget } = e;
                 const { left, top, width, height } =
@@ -179,11 +183,11 @@ export default function Hero() {
                   ease: "elastic.out(1, 0.3)",
                 });
               }}
-              className="px-10 py-5 rounded-2xl border border-white/10 text-white font-bold uppercase tracking-widest text-xs hover:bg-white/5 transition-all flex items-center gap-2 group"
+              className="px-10 py-5 rounded-2xl border border-white/10 text-white font-bold uppercase tracking-widest text-xs hover:bg-white/5 transition-all flex items-center gap-2 group cursor-pointer"
             >
               <HiOutlineDownload className="text-lg group-hover:scale-110 transition-transform" />
               Download CV
-            </button>
+            </a>
           </div>
 
           {/* Tech Stack Subtle */}
