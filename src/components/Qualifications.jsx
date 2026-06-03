@@ -12,7 +12,7 @@ const education = [
   {
     title: "B.A (Honors) in Islamic History and Culture",
     institution: "Dhaka Central University",
-    duration: "2024 — Present (2nd Year)",
+    duration: "2025 — Present (Expected 2028)",
     description: "Focus: Cultural heritage, historical analysis, and academic research.",
     current: true
   },

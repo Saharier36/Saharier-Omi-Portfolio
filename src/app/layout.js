@@ -41,9 +41,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
       <body className="antialiased">
-        <CustomCursor />
-        <ScrollToTop />
         <SmoothScrollProvider>
+          <CustomCursor />
+          <ScrollToTop />
           <PageTransition>{children}</PageTransition>
         </SmoothScrollProvider>
       </body>
