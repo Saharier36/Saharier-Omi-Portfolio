@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📚 Saharier-Omi Portfolio
 
-## Getting Started
+![Banner](https://raw.githubusercontent.com/Saharier36/Saharier-Omi-Portfolio/main/assets/banner.png)
 
-First, run the development server:
+A modern, responsive personal portfolio showcasing **Saharier Omi**'s projects, skills, and experiences. Built with vanilla HTML, CSS, and JavaScript, the site emphasizes clean design, smooth animations, and a vibrant dark‑mode aesthetic.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Responsive layout** – looks great on mobile, tablet, and desktop.
+- **Dynamic animations** – subtle hover effects, scroll‑based reveals, and smooth transitions.
+- **Dark‑mode ready** – elegant glass‑morphism style with carefully curated color palette.
+- **Project showcase** – interactive cards with live demo links.
+- **Contact form** – ready for integration with a backend or third‑party service.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- A modern web browser (Chrome, Firefox, Edge, Safari).
+- Node.js (optional, only if you want to run a local dev server).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Saharier36/Saharier-Omi-Portfolio.git
+   cd Saharier-Omi-Portfolio
+   ```
+2. Open `index.html` directly in your browser **or** serve the project locally:
+   ```bash
+   npx -y serve .
+   ```
+   This will start a dev server at `http://localhost:3000`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📖 Usage
+
+- Navigate through the sections using the sticky navigation bar.
+- Hover over project cards to see animated previews.
+- Use the theme toggle in the header to switch between light and dark modes.
+
+---
+
+## 🛠️ Development
+
+If you wish to extend the portfolio:
+
+1. Modify styles in `styles.css` – the file follows a **BEM‑like** naming convention for easy overrides.
+2. Add new sections by editing `index.html` and linking to new CSS/JS files as needed.
+3. Use the `scripts.js` file to implement additional interactive features.
+
+---
+
+## 📦 Deploying
+
+The site can be deployed to any static‑hosting platform:
+
+- **GitHub Pages** – push the code to the `gh-pages` branch.
+- **Vercel** or **Netlify** – configure the project as a static site and point to the repository root.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- Inspired by modern portfolio templates and the **glassmorphism** design trend.
+- Special thanks to the open‑source community for the icons and fonts used.
+
+---
+
+<div align="center">
+  <small>Made with ❤️ by <a href="https://github.com/Saharier36">Saharier Omi</a></small>
+</div>
