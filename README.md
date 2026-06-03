@@ -1,6 +1,5 @@
 # 📚 Saharier-Omi Portfolio
 
-![Banner](https://raw.githubusercontent.com/Saharier36/Saharier-Omi-Portfolio/main/assets/banner.png)
 
 A modern, responsive personal portfolio showcasing **Saharier Omi**'s projects, skills, and experiences. Built with vanilla HTML, CSS, and JavaScript, the site emphasizes clean design, smooth animations, and a vibrant dark‑mode aesthetic.
 
@@ -62,12 +61,6 @@ The site can be deployed to any static‑hosting platform:
 
 - **GitHub Pages** – push the code to the `gh-pages` branch.
 - **Vercel** or **Netlify** – configure the project as a static site and point to the repository root.
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
 
 ---
 
