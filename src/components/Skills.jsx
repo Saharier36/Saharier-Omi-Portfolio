@@ -6,9 +6,10 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { 
   SiReact, SiNextdotjs, SiMongodb, SiExpress, 
-  SiTailwindcss, SiNodedotjs, SiFirebase, SiJavascript,
+  SiTailwindcss, SiNodedotjs, SiJavascript,
   SiGit, SiFigma, SiVercel, SiNetlify, SiGithub
 } from "react-icons/si";
+import { FaShieldAlt } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,7 +29,7 @@ const skillCategories = [
       { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
       { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
       { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-      { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
+      { name: "Better Auth", icon: FaShieldAlt, color: "#FF007A" },
     ]
   },
   {

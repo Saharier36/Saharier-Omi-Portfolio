@@ -1,52 +1,39 @@
 import ProjectCard from "./ProjectCard";
+import studynookImg from "@/assets/studynook.png";
 import qurbaniImg from "@/assets/Screenshot 2026-05-04 205928.png";
 import bookVibeImg from "@/assets/Screenshot 2026-04-03 150554.png";
-import digiToolsImg from "@/assets/Screenshot 2026-04-08 172201.png";
 
 export default function CaseStudies() {
   const projects = [
     {
-      title: "Qurbani-Hat — Digital Marketplace",
+      title: "StudyNook — Booking Platform",
       category: "Full Stack Development",
       description:
-        "A digital marketplace for Qurbani animals where buyers can explore listings, check breeds, and get tips. Features full authentication and real-time notifications.",
-      tech: ["Next.js 15", "React 19", "HeroUI", "Better Auth", "MongoDB"],
+        "A modern study room booking platform featuring conflict-free booking flows, secure Google OAuth/JWT session handling, and a dynamic Light/Dark mode UI.",
+      tech: ["Next.js", "Express.js", "Better Auth", "MongoDB"],
+      image: studynookImg,
+      liveLink: "https://studynook-zeta.vercel.app/",
+      githubLink: "https://github.com/Saharier36/studynook-client",
+    },
+    {
+      title: "Qurbani-Hat — Livestock Shop",
+      category: "Full Stack Development",
+      description:
+        "A digital marketplace for Qurbani animals where buyers can explore listings, check breeds, and list livestock. Features full Better Auth integrations and real-time notifications.",
+      tech: ["Next.js", "React", "Better Auth", "MongoDB"],
       image: qurbaniImg,
       liveLink: "https://qurbani-hat-pied.vercel.app/",
       githubLink: "https://github.com/Saharier36/Qurbani-Hat",
     },
     {
-      title: "Book Vibe — Discovery & Tracking",
+      title: "Book Vibe — Discovery Tracker",
       category: "React Web App",
       description:
-        "A book discovery and tracking app to manage reading journeys. Includes Read Lists, Wishlists (persisted via Local Storage), and progress visualization.",
-      tech: [
-        "React 19",
-        "Tailwind v4",
-        "DaisyUI v5",
-        "Recharts",
-        "React Router v7",
-      ],
+        "A book discovery and reading journey tracker with interactive reading list, wishlist, Local Storage persistence, and reading progress visualizations.",
+      tech: ["React", "Tailwind v4", "DaisyUI", "Recharts", "React Router"],
       image: bookVibeImg,
       liveLink: "https://book-vibe-bookshelf.vercel.app/",
       githubLink: "https://github.com/Saharier36/Book-Vibe",
-      reverse: true,
-    },
-    {
-      title: "DigiTools — Digital Shop",
-      category: "Frontend Development",
-      description:
-        "A digital tools buying platform focusing on state management and component architecture. Features product listing, cart management, and toast feedback.",
-      tech: [
-        "React 19",
-        "Vite",
-        "Tailwind CSS v4",
-        "DaisyUI v5",
-        "React-Toastify",
-      ],
-      image: digiToolsImg,
-      liveLink: "https://digital-tools-shop-woad.vercel.app/",
-      githubLink: "https://github.com/Saharier36/Digital-Tools-Shop",
     },
   ];
 
@@ -64,13 +51,12 @@ export default function CaseStudies() {
           Featured <span className="gradient-text">Projects</span>
         </h3>
       </div>
-      <div className="max-w-7xl mx-auto space-y-32">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
             index={index}
             project={project}
-            reverse={project.reverse}
           />
         ))}
       </div>

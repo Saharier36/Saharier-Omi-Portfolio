@@ -51,7 +51,7 @@ export default function CustomCursor() {
         }}
         animate={{
           scale: isHovered ? 2.5 : 1,
-          backgroundColor: isHovered ? "rgba(255, 0, 122, 0.2)" : "transparent",
+          backgroundColor: isHovered ? "rgba(255, 0, 122, 0.2)" : "rgba(255, 0, 122, 0)",
         }}
       />
       <motion.div
